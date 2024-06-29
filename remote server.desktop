@@ -1,0 +1,21 @@
+[Desktop Entry]
+Version=1.0
+Name=Remote Server <ip server> - RDP
+Comment=Run the 'Remote Command' command in a terminal
+# Cara Install
+# 1. Install xfreerdp: sudo apt-get install freerdp2-x11
+# 2. Install gnome-terminal: sudo apt-get install gnome-terminal
+# 3. [ Ganti Direktori ke Desktop ]: cd /Desktop
+# 4. touch <nama file>.desktop
+# 5. vim <nama file>.desktop
+# 6. copy-paste code ini
+# 7. exit vim: :wq -> Enter
+# 8. sudo chmod +x <nama file>.desktop
+# 9. Jika dibutuhkan, Klik kanan pada file -> Properties -> Permissions -> check 'Allow executing file as program'
+# 10. Buka <nama file>.desktop
+Exec=gnome-terminal -- bash -c "xfreerdp /v:<ip server> /u:<user name> /p:<password> /w:1315 /h:700 /dynamic-resolution /bpp:32; exec bash"
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=Utility;
+
