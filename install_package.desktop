@@ -6,7 +6,7 @@ Comment=Run the 'Remote Command' command in a terminal
 # 1. sudo chmod +x <nama file>.desktop
 # 2. Jika dibutuhkan, Klik kanan pada file -> Properties -> Permissions -> check 'Allow executing file as program'
 # 3. Buka <nama file>.desktop
-Exec=gnome-terminal -- bash -c "sudo apt update && sudo apt install gnome-terminal freerdp-x11 openssh; exec bash"
+Exec=gnome-terminal -- bash -c "sudo apt update && sudo apt install gnome-terminal freerdp-x11 openssh-server && sudo ufw allow 22 && sudo ufw enable; exec bash"
 Icon=utilities-terminal
 Terminal=true
 Type=Application
